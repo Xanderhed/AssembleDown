@@ -1,10 +1,9 @@
 const INITIAL_STATE = [
   {
     id: 1,
-    source: "/images/TsarsPalace.jpg",
-    name: "Tsar's Palace",
-    breakpoint: 22,
-    payout: [5,3,2]
+    source: "/images/Warbot.jpg",
+    name: "Warbot",
+    power: 4
   }
 ]
 

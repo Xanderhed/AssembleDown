@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Card from './card';
 
-export default class Hand extends Component {
-  clicked() {
-    console.log("Test");
-
+class Hand extends Component {
+  renderCards() {
+    return this.props.cards.map((card) => {
+        return (
+          <li key={card.id}>
+            <Card card={card} />
+          </li>
+        );
+    });
   }
 
   render() {
     return (
-      <button onClick={this.clicked} className="btn btn-primary">Play</button>
-    )
-  };
+      <ul>
+        {this.renderCards()}
+      </ul>
+    );
+  }
 }
+
+function mapStateToProps(state) {
+  return { cards: state.cards }
+};
+
+export default connect(mapStateToProps, undefined)(Hand);

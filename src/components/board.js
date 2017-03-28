@@ -7,6 +7,9 @@ class Board extends Component {
       return (
         <li key={base.id}>
           <img src={base.source} />
+          <h5>Name: {base.name}</h5>
+          <h5>Breakpoint: {base.breakpoint}</h5>
+          <h5>payout: {base.payout[0]}, {base.payout[1]}, {base.payout[2]}</h5>
         </li>
       );
     });
